@@ -208,7 +208,8 @@ func GetProvider(ctx context.Context, generationProvider bool) (*config.Provider
 			TagsAllRemoval(),
 			IdentifierAssignedByAWS(),
 			KnownReferencers(),
-			AddExternalTagsField(),
+			// Removed since the "S3-compatible" storage we are using does not support tags
+			//AddExternalTagsField(),
 			ResourceConfigurator(),
 			NamePrefixRemoval(),
 			DocumentationForTags(),
